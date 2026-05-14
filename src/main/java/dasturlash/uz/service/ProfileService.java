@@ -93,7 +93,7 @@ public class ProfileService {
 
     public Boolean delete(Integer id) {
         ProfileEntity entity = get(id);
-        entity.setVisible(true);
+        entity.setVisible(false);
         profileRepository.save(entity); // or write a JPA query to update only visible
         return true;
     }
