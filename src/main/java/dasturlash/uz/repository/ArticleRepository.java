@@ -13,5 +13,7 @@ public interface ArticleRepository extends CrudRepository<ArticleEntity, String>
 
     List<ArticleEntity> findTop5ByCategoryIdAndStatusAndVisibleTrueOrderByCreatedDateDesc(Integer categoryId, ArticleStatus status);
 
+    Optional<ArticleEntity> findByIdAndVisibleTrue(String id);
+
     Optional<ArticleEntity> findByIdAndStatusAndVisibleTrue(String id, ArticleStatus status);
 }
